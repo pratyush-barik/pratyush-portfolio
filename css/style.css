@@ -1,0 +1,141 @@
+/* -----------------------------
+   GLOBAL STYLES
+----------------------------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", sans-serif;
+}
+
+body {
+    background: #0f172a;
+    color: white;
+    overflow-x: hidden;
+}
+
+h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: #7dd3fc;
+}
+
+section.content {
+    max-width: 900px;
+    margin: 70px auto;
+    padding: 20px;
+    animation: slideUp 1s ease forwards;
+    opacity: 0;
+}
+
+/* -----------------------------
+   HERO SECTION
+----------------------------- */
+.hero-section {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.hero-card {
+    width: 80%;
+    max-width: 1000px;
+    background: linear-gradient(135deg, #0ea5e9, #1e3a8a);
+    border-radius: 20px;
+    padding: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+    animation: fadeIn 1.2s ease-out forwards;
+    opacity: 0;
+}
+
+/* LEFT SIDE */
+.left-content {
+    width: 60%;
+}
+
+.left-content h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.left-content h3 {
+    color: #dbeafe;
+    margin-bottom: 15px;
+}
+
+.left-content p {
+    line-height: 1.5;
+    color: #e0f2fe;
+}
+
+/* ICONS */
+.icons {
+    margin-top: 20px;
+}
+
+.icons a {
+    color: white;
+    font-size: 28px;
+    margin-right: 20px;
+    transition: 0.3s;
+}
+
+.icons a:hover {
+    color: #c7fffd;
+    transform: scale(1.2);
+}
+
+/* RIGHT SIDE */
+.profile-img {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #bae6fd;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+}
+
+/* -----------------------------
+   ANIMATIONS
+----------------------------- */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideUp {
+    from { opacity: 0; transform: translateY(40px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Floating text animation */
+.floating-text {
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
+}
+
+/* -----------------------------
+   RESPONSIVE
+----------------------------- */
+@media (max-width: 900px) {
+    .hero-card {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .left-content {
+        width: 100%;
+    }
+
+    .profile-img {
+        margin-top: 20px;
+    }
+}
